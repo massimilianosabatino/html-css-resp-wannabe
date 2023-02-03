@@ -128,7 +128,26 @@ img {
     SOLUZIONE RESPONSIVE
  ************************************************/
 
- /*** Mobile rules ***/
+/*** Desktop fix ***/
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 100vw;
+    }
+}
+
+/*** Tablet rules ***/ 
+@media screen and (min-width: 480px) and (max-width: 768px ) {
+    .container {
+        width: 100%;
+    }
+
+    .lessons .col img,
+    .steps .col img {
+        object-fit: contain;
+    }
+}
+
+/*** Mobile rules ***/
 @media screen and (max-width: 480px) {
     .container {
         width: 100%;
@@ -156,9 +175,14 @@ img {
     }
 }
 
-/*** Tablet rules ***/
-@media screen and (min-width: 480px) and (max-width: 768px ) {
+
+
+/*** Probabilmente al posto di desktop fix e tablet rules, sarebbe bastato solo quanto di seguito ***/
+/* @media screen and (min-width: 480px) {
     .container {
-        width: 100%;
+        max-width: 100%;
     }
-}
+    .lessons .col img {
+        object-fit: contain;
+    }
+} */
